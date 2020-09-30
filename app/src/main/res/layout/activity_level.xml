@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/babywhite"
+    tools:context=".level">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_level" />
+
+    <Button
+        android:id="@+id/btn_facil"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="@color/babyred"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Fácil"
+        android:textAllCaps="false"
+        android:textColor="@color/babywhite"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btn_dificil"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="@color/babyred"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Difícil"
+        android:textAllCaps="false"
+        android:textColor="@color/babywhite"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_normal" />
+
+    <Button
+        android:id="@+id/btn_normal"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="@color/babyred"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Normal"
+        android:textAllCaps="false"
+        android:textColor="@color/babywhite"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_facil" />
+</androidx.constraintlayout.widget.ConstraintLayout>

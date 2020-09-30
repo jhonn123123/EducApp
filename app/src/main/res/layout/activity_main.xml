@@ -20,12 +20,12 @@
         app:srcCompat="@drawable/vector_loging" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_jugar"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="189dp"
         android:layout_height="63dp"
         android:layout_marginTop="448dp"
-        android:background="@drawable/btn"
+        android:background="@drawable/ripple_effect"
         android:text="Jugar"
         android:textColor="@color/babywhite"
         android:textSize="24sp"
