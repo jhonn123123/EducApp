@@ -3,16 +3,16 @@ package com.example.educapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_facil.*
 import kotlinx.android.synthetic.main.activity_level.*
-import kotlinx.android.synthetic.main.activity_main.*
 
-class level : AppCompatActivity() {
+class facil : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_level)
+        setContentView(R.layout.activity_facil)
 
-        btn_facil.setOnClickListener {
-            val intent = Intent( this,facil::class.java)
+        btn_suma.setOnClickListener {
+            val intent = Intent( this,suma::class.java)
             startActivity(intent)
         }
     }

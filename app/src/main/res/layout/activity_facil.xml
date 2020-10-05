@@ -5,66 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/babywhite"
-    tools:context=".level">
+    tools:context=".facil">
+
+    <Button
+        android:id="@+id/btn_suma"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="@color/babyred"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Sumas"
+        android:textAllCaps="false"
+        android:textColor="@color/babywhite"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/btn_resta"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/ripple_effect"
+        android:backgroundTint="@color/babyred"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Restas"
+        android:textAllCaps="false"
+        android:textColor="@color/babywhite"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_suma" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector_level" />
 
-    <Button
-        android:id="@+id/btn_facil"
-        android:layout_width="222dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/ripple_effect"
-        android:backgroundTint="@color/babyred"
-        android:fontFamily="@font/ubuntu_light"
-        android:text="Fácil"
-        android:textAllCaps="false"
-        android:textColor="@color/babywhite"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/btn_dificil"
-        android:layout_width="222dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/ripple_effect"
-        android:backgroundTint="@color/babyred"
-        android:fontFamily="@font/ubuntu_light"
-        android:text="Difícil"
-        android:textAllCaps="false"
-        android:textColor="@color/babywhite"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_normal" />
-
-    <Button
-        android:id="@+id/btn_normal"
-        android:layout_width="222dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/ripple_effect"
-        android:backgroundTint="@color/babyred"
-        android:fontFamily="@font/ubuntu_light"
-        android:text="Normal"
-        android:textAllCaps="false"
-        android:textColor="@color/babywhite"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_facil" />
-
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView6"
         android:layout_width="113dp"
         android:layout_height="98dp"
         android:layout_marginStart="20dp"
@@ -74,16 +58,17 @@
         tools:srcCompat="@drawable/perfil" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="127dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:id="@+id/textView"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/ubuntu_light"
-        android:text="Niveles"
+        android:text="Nivel: Fácil"
         android:textColor="@color/babywhite"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
