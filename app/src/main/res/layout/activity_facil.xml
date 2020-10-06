@@ -11,7 +11,6 @@
         android:id="@+id/btn_suma"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginStart="94dp"
         android:layout_marginTop="140dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
@@ -20,6 +19,7 @@
         android:textAllCaps="false"
         android:textColor="@color/babywhite"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -27,7 +27,6 @@
         android:id="@+id/btn_resta"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginStart="94dp"
         android:layout_marginTop="108dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
@@ -36,6 +35,7 @@
         android:textAllCaps="false"
         android:textColor="@color/babywhite"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_suma" />
 
@@ -47,28 +47,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector_level" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="113dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/perfil" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="180dp"
         android:layout_height="43dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="48dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Nivel: Fácil"
         android:textColor="@color/babywhite"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.351" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

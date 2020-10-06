@@ -19,7 +19,6 @@
         android:id="@+id/btn_facil"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginStart="94dp"
         android:layout_marginTop="72dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
@@ -28,6 +27,7 @@
         android:textAllCaps="false"
         android:textColor="@color/babywhite"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -35,7 +35,6 @@
         android:id="@+id/btn_dificil"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginStart="94dp"
         android:layout_marginTop="72dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
@@ -44,6 +43,8 @@
         android:textAllCaps="false"
         android:textColor="@color/babywhite"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_normal" />
 
@@ -51,7 +52,6 @@
         android:id="@+id/btn_normal"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginStart="94dp"
         android:layout_marginTop="72dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
@@ -60,30 +60,35 @@
         android:textAllCaps="false"
         android:textColor="@color/babywhite"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_facil" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="113dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/perfil" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="127dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Niveles"
         android:textColor="@color/babywhite"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.353" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="113dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/perfil" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
