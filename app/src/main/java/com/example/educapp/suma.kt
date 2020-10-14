@@ -22,8 +22,8 @@ class suma : AppCompatActivity() {
         val ImageView2 = findViewById<ImageView>(R.id.n2)
 
 
-        var resource=numeros[Random.nextInt((numeros.size/2))];
-        var resource2=numeros[Random.nextInt((numeros.size/2))];
+        var resource=numeros[Random.nextInt((numeros.size/2)+1)];
+        var resource2=numeros[Random.nextInt((numeros.size/2)+1)];
         ImageView1.setImageResource(resource)
         ImageView2.setImageResource(resource2)
 
