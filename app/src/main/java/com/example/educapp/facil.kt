@@ -15,5 +15,9 @@ class facil : AppCompatActivity() {
             val intent = Intent( this,suma::class.java)
             startActivity(intent)
         }
+        btn_resta.setOnClickListener {
+            val intent = Intent(this, restas::class.java)
+            startActivity(intent)
+        }
     }
 }
