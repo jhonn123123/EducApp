@@ -30,6 +30,44 @@ class suma : AppCompatActivity() {
         var rn1=Random.nextInt(numeros.size)
         var rn2=Random.nextInt((numeros.size))
         var resource=numeros[rn1];
+
+        when (rn1) {
+            0 -> {rn2=Random.nextInt(numeros.size)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            1 -> {rn2=Random.nextInt(0,10)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            2 -> {rn2=Random.nextInt(0,9)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            3 -> {rn2=Random.nextInt(0,8)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            4 -> {rn2=Random.nextInt(0,7)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            5 -> {rn2=Random.nextInt(0,6)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            6 -> {rn2=Random.nextInt(0,5)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            7 -> {rn2=Random.nextInt(0,4)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            8 -> {rn2=Random.nextInt(0,3)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            9 -> {rn2=Random.nextInt(0,2)
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+            10 -> {
+                rn2=0
+                var resource2=numeros[rn2];
+                ImageView2.setImageResource(resource2)}
+        }
+        /*
         if (rn1==0){
             rn2=Random.nextInt(numeros.size)
             var resource2=numeros[rn2];
@@ -40,7 +78,9 @@ class suma : AppCompatActivity() {
             var resource2=numeros[rn2];
             ImageView2.setImageResource(resource2)
         }
-        if (rn1==2){
+        if (rn2=Random.nextInt(0,8)
+            var resource2=numeros[rn2];
+            ImageView2.setImageResource(resource2)rn1==2){
             rn2=Random.nextInt(0,9)
             var resource2=numeros[rn2];
             ImageView2.setImageResource(resource2)
@@ -84,7 +124,7 @@ class suma : AppCompatActivity() {
             rn2=0
             var resource2=numeros[rn2];
             ImageView2.setImageResource(resource2)
-        }
+        }*/
         //--var resource=numeros[rn1];
         //--var resource2=numeros[rn2];
         //var resource3=manzanas[rn1];

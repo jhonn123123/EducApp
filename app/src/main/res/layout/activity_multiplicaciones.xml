@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".multiplicaciones">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_level" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="267dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Multiplicaciones"
+        android:textColor="@color/babywhite"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ScrollView
+        android:layout_width="417dp"
+        android:layout_height="527dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple11"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq1"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple12"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq2"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple13"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq3"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple14"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq4"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple15"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq5"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple16"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq6"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple17"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq7"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple18"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq8"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple19"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq9"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/apple110"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/x10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_por" />
+
+                <ImageView
+                    android:id="@+id/apple210"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+                <ImageView
+                    android:id="@+id/eq10"
+                    android:layout_width="187dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/signo_igual2" />
+
+                <ImageView
+                    android:id="@+id/rm10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/one_obj" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_siguientem"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_azul"
+                android:backgroundTint="@color/press"
+                android:fontFamily="@font/ubuntu_light"
+                android:gravity="center"
+                android:text="Siguiente"
+                android:textAllCaps="false"
+                android:textColor="@color/babywhite"
+                android:textSize="30sp"
+                 />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

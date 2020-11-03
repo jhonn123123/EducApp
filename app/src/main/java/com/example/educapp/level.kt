@@ -15,5 +15,10 @@ class level : AppCompatActivity() {
             val intent = Intent( this,facil::class.java)
             startActivity(intent)
         }
+
+        btn_normal.setOnClickListener {
+            val intent = Intent( this,normal::class.java)
+            startActivity(intent)
+        }
     }
 }

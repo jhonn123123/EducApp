@@ -18,12 +18,89 @@ class restas : AppCompatActivity() {
         var rn2= Random.nextInt((numeros.size))
         var n1=numeros[rn1];
 
-        if (rn1==1){
+        when (rn1){
+            1 -> {rn2=Random.nextInt(0,1)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            2 -> {rn2=Random.nextInt(0,2)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            3 -> {rn2=Random.nextInt(0,3)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            4 -> {rn2=Random.nextInt(0,4)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            5 -> {rn2=Random.nextInt(0,5)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            6 -> {rn2=Random.nextInt(0,6)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            7 -> {rn2=Random.nextInt(0,7)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            8 -> {rn2=Random.nextInt(0,8)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            9 -> {rn2=Random.nextInt(0,9)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+            10 -> {rn2=Random.nextInt(0,10)
+                var n2=numeros[rn2];
+                ImageView2.setImageResource(n2)}
+        }
+
+        /*if (rn1==1){
             rn2=Random.nextInt(0,1)
             var n2=numeros[rn2];
             ImageView2.setImageResource(n2)
         }
-
+        if (rn1==2){
+            rn2=Random.nextInt(0,2)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==3){
+            rn2=Random.nextInt(0,3)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==4){
+            rn2=Random.nextInt(0,4)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==5){
+            rn2=Random.nextInt(0,5)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==6){
+            rn2=Random.nextInt(0,6)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==7){
+            rn2=Random.nextInt(0,7)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==8){
+            rn2=Random.nextInt(0,8)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==9){
+            rn2=Random.nextInt(0,9)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }
+        if (rn1==10){
+            rn2=Random.nextInt(0,10)
+            var n2=numeros[rn2];
+            ImageView2.setImageResource(n2)
+        }*/
         ImageView1.setImageResource(n1)
     }
 }

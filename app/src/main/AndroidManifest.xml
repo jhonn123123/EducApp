@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".restas"></activity>
+        <activity android:name=".multiplicaciones"></activity>
+        <activity android:name=".normal" />
+        <activity android:name=".restas" />
         <activity android:name=".suma" />
         <activity android:name=".facil" />
         <activity android:name=".level" />
