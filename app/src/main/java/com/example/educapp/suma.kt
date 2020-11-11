@@ -5,6 +5,8 @@ import android.icu.number.IntegerWidth
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import kotlinx.android.synthetic.main.activity_level.*
+import kotlinx.android.synthetic.main.activity_suma.*
 import java.util.*
 import kotlin.random.Random
 import kotlin.random.nextInt
@@ -31,108 +33,78 @@ class suma : AppCompatActivity() {
         var rn2=Random.nextInt((numeros.size))
         var resource=numeros[rn1];
 
+        fun btnar(n1: Int,n2: Int){
+
+            btn_ar.setOnClickListener {
+                val intent = Intent( this,AR::class.java)
+                intent.putExtra("n1",n1)
+                intent.putExtra("n2",n2)
+                startActivity(intent)
+            }
+        }
+
         when (rn1) {
             0 -> {rn2=Random.nextInt(numeros.size)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             1 -> {rn2=Random.nextInt(0,10)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             2 -> {rn2=Random.nextInt(0,9)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             3 -> {rn2=Random.nextInt(0,8)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             4 -> {rn2=Random.nextInt(0,7)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             5 -> {rn2=Random.nextInt(0,6)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             6 -> {rn2=Random.nextInt(0,5)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             7 -> {rn2=Random.nextInt(0,4)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             8 -> {rn2=Random.nextInt(0,3)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             9 -> {rn2=Random.nextInt(0,2)
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
             10 -> {
                 rn2=0
                 var resource2=numeros[rn2];
-                ImageView2.setImageResource(resource2)}
+                ImageView2.setImageResource(resource2)
+                btnar(rn1,rn2)
+            }
         }
-        /*
-        if (rn1==0){
-            rn2=Random.nextInt(numeros.size)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==1){
-            rn2=Random.nextInt(0,10)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn2=Random.nextInt(0,8)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)rn1==2){
-            rn2=Random.nextInt(0,9)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==3){
-            rn2=Random.nextInt(0,8)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==4){
-            rn2=Random.nextInt(0,7)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==5){
-            rn2=Random.nextInt(0,6)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==6){
-            rn2=Random.nextInt(0,5)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==7){
-            rn2=Random.nextInt(0,4)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==8){
-            rn2=Random.nextInt(0,3)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==9){
-            rn2=Random.nextInt(0,2)
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }
-        if (rn1==10){
-            rn2=0
-            var resource2=numeros[rn2];
-            ImageView2.setImageResource(resource2)
-        }*/
-        //--var resource=numeros[rn1];
-        //--var resource2=numeros[rn2];
-        //var resource3=manzanas[rn1];
-        //var resource4=manzanas[rn2];
+
 
         ImageView1.setImageResource(resource)
-        //ImageView2.setImageResource(resource2)
-        //ImageView3.setImageResource(resource3)
-        //ImageView4.setImageResource(resource4)
+
+
     }
 }

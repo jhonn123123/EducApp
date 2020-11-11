@@ -11,6 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector_level" />
@@ -55,27 +56,14 @@
         android:id="@+id/textView2"
         android:layout_width="127dp"
         android:layout_height="44dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Niveles"
         android:textColor="@color/babywhite"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.006"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.353" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="113dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/perfil" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

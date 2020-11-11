@@ -7,14 +7,16 @@
     tools:context=".restas">
 
     <Button
-        android:id="@+id/btn_ar3"
+        android:id="@+id/btn_ar2"
         android:layout_width="82dp"
         android:layout_height="46dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/ripple_effect"
-        android:text=""
+        android:background="@drawable/btn_azul"
+        android:text="?"
+        android:textColor="@color/babypink"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
@@ -32,7 +34,7 @@
         android:id="@+id/textView4"
         android:layout_width="113dp"
         android:layout_height="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Restas"
         android:textColor="@color/babywhite"
@@ -87,7 +89,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_ar3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ar2"
         app:layout_constraintStart_toEndOf="@+id/r2"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:srcCompat="@drawable/signo_igual" />

@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import kotlinx.android.synthetic.main.activity_level.*
+import kotlinx.android.synthetic.main.activity_multiplicaciones.*
+import kotlinx.android.synthetic.main.activity_suma.*
+import kotlin.random.Random
 
 class multiplicaciones : AppCompatActivity() {
 
@@ -34,13 +38,22 @@ class multiplicaciones : AppCompatActivity() {
 
         var r:Int =0
 
+        fun btnar(n1: Int,n2: Int){
+
+            btn_siguientem.setOnClickListener {
+                val intent = Intent( this,AR::class.java)
+                intent.putExtra("n1",n1)
+                intent.putExtra("n2",n2)
+                startActivity(intent)
+            }
+        }
+
         when(n1){
             1 -> {
                 for (i in 0..9)
                 {
                     app1[i].setImageResource(manzanas[n1])
                     app2[i].setImageResource(manzanas[i+1])
-                    r=n1*(i+1)
                     result[i].setImageResource(rt1[i])
                 }
             }
@@ -125,7 +138,8 @@ class multiplicaciones : AppCompatActivity() {
                 }
             }*/
         }
-
+        val n2 = Random.nextInt(1,10)
+        btnar(n1,n2)
 
         /*val ImageView1 = findViewById<ImageView>(R.id.apple11)
         val ImageView2 = findViewById<ImageView>(R.id.apple21)

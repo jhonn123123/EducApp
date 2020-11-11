@@ -11,7 +11,7 @@
         android:id="@+id/btn_suma"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
         android:fontFamily="@font/ubuntu_light"
@@ -27,7 +27,7 @@
         android:id="@+id/btn_resta"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
         android:fontFamily="@font/ubuntu_light"
@@ -35,14 +35,18 @@
         android:textAllCaps="false"
         android:textColor="@color/babywhite"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_suma" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_suma"
+        app:layout_constraintVertical_bias="0.352" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector_level" />
