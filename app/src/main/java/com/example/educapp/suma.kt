@@ -39,6 +39,7 @@ class suma : AppCompatActivity() {
                 val intent = Intent( this,AR::class.java)
                 intent.putExtra("n1",n1)
                 intent.putExtra("n2",n2)
+                intent.putExtra("signo",1)
                 startActivity(intent)
             }
         }
