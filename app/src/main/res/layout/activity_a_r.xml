@@ -10,7 +10,7 @@
         <!--<fragment
 
             android:id="@+id/fragment"
-            android:name="com.google.ar.sceneform.ux.ArFragment"
+            android:name="com.example.educapp.CustomArFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
@@ -21,7 +21,8 @@
         <com.google.ar.sceneform.ArSceneView
             android:id="@+id/ar_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:keepScreenOn="true">
 
         </com.google.ar.sceneform.ArSceneView>
 

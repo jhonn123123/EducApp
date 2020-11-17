@@ -3,63 +3,86 @@ package com.example.educapp
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.ar.core.*
 import com.google.ar.core.exceptions.*
+import com.google.ar.sceneform.AnchorNode
 import com.google.ar.sceneform.FrameTime
 import com.google.ar.sceneform.Scene
+import com.google.ar.sceneform.rendering.ModelRenderable
 import kotlinx.android.synthetic.main.activity_a_r.*
-import javax.microedition.khronos.opengles.GL10
-
 
 
 class AR : AppCompatActivity(), Scene.OnUpdateListener {
 
+    private var arFragment: CustomArFragment? = null
 
 
 
-    /*private lateinit var arFragment: ArFragment
-    private lateinit var modelReadable: ModelRenderable
-    private  var Model_URL: String = "https://github.com/EasylearnIndia/EasyLearn/blob/Augmented-Reality/EasyLearn/Assets/Models/tiger/tiger.glb?raw=true"
-    */
-    //private var session: Session? = null
+
+
     var placementIsDone = false;
 
     private var session: Session?=null
     private var shouldConfigureSession = false
-    //var session = Session(applicationContext)
+    private val GLTF_ASSET = "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf"
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_a_r)
 
+        //arFragment=supportFragmentManager.findFragmentById(R.id.fragment) as CustomArFragment?
+        //arFragment!!.getArSceneView()!!.getScene().addOnUpdateListener(this);
+
+
+
         val obj: Intent = intent
         val n1 = obj.getIntExtra("n1", 1)
         val n2 = obj.getIntExtra("n2", 1)
         val signo = obj.getIntExtra("signo", 1)
 
-        numeros(n1,n2,signo)
+        numeros(n1, n2, signo)
 
         setupSession()
-
         ar_view.scene.addOnUpdateListener(this)
-        //maybeEnableArButton();
-        //createSession()
 
-        //onDrawFrame()
+
+
+        //maybeEnableArButton();
+
+
+
 
 
     }
 
-    fun numeros(n1:Int,n2:Int,signo:Int){
-        val numeros= arrayListOf(R.drawable.numero_0,R.drawable.numero_1,R.drawable.numero_2,R.drawable.numero_3,R.drawable.numero_4,R.drawable.numero_5,R.drawable.numero_6,R.drawable.numero_7,R.drawable.numero_8,R.drawable.numero_9,R.drawable.numero_10);
-        val signos=arrayListOf(R.drawable.signo_suma,R.drawable.signo_suma,R.drawable.signo_resta,R.drawable.signo_por)
+    fun numeros(n1: Int, n2: Int, signo: Int){
+        val numeros= arrayListOf(
+            R.drawable.numero_0,
+            R.drawable.numero_1,
+            R.drawable.numero_2,
+            R.drawable.numero_3,
+            R.drawable.numero_4,
+            R.drawable.numero_5,
+            R.drawable.numero_6,
+            R.drawable.numero_7,
+            R.drawable.numero_8,
+            R.drawable.numero_9,
+            R.drawable.numero_10
+        );
+        val signos=arrayListOf(
+            R.drawable.signo_suma,
+            R.drawable.signo_suma,
+            R.drawable.signo_resta,
+            R.drawable.signo_por
+        )
         val viewn1 = findViewById<ImageView>(R.id.arn1)
         val viewsigno = findViewById<ImageView>(R.id.signo)
         val viewn2 = findViewById<ImageView>(R.id.arn2)
@@ -75,7 +98,13 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
         if (availability.isTransient) {
             // Re-query at 5Hz while compatibility is checked in the background.
             Handler().postDelayed(Runnable { maybeEnableArButton() }, 200)
+
+
+
+
+
         }
+
     }
 
     fun createSession() {
@@ -115,7 +144,7 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
         {
             try {
                 session=Session(this)
-            }catch(e: UnavailableArcoreNotInstalledException)
+            }catch (e: UnavailableArcoreNotInstalledException)
             {
                 e.printStackTrace()
             }
@@ -123,11 +152,11 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
             {
                 e.printStackTrace()
             }
-            catch(e: UnavailableSdkTooOldException)
+            catch (e: UnavailableSdkTooOldException)
             {
                 e.printStackTrace()
             }
-            catch(e: UnavailableDeviceNotCompatibleException)
+            catch (e: UnavailableDeviceNotCompatibleException)
             {
                 e.printStackTrace()
             }
@@ -153,7 +182,7 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
 
     private fun configSession() {
         val config = Config(session)
-        if(!buildDatabase (config))
+        if(!buildDatabase(config))
             Toast.makeText(this@AR, "Error built-in database", Toast.LENGTH_SHORT).show()
         config.updateMode = Config.UpdateMode.LATEST_CAMERA_IMAGE
         session!!.configure(config)
@@ -167,13 +196,13 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
             return false
 
         augmentedImageDatabase = AugmentedImageDatabase(session)
-        augmentedImageDatabase.addImage("target_1",bitmap)
+        augmentedImageDatabase.addImage("target_1", bitmap)
         config.augmentedImageDatabase = augmentedImageDatabase
         return true
     }
 
     private fun loadBitmapFromAsset(): Bitmap? {
-        val inputStream = assets.open("target_1.png")
+        val inputStream = assets.open("earth.jpg")
         return BitmapFactory.decodeStream(inputStream)
     }
 
@@ -186,7 +215,22 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
             {
                 if (augmentedImg.name.equals("target_1"))
                 {
-                    val node = Mynode(this,R.raw.meltanfbx)
+                    /*ModelRenderable.builder()
+                        .setSource(
+                            this, RenderableSource.builder().setSource(
+                                this,
+                                Uri.parse("../../../../app/sampledata/meltan.glb"),
+                                RenderableSource.SourceType.GLTF2
+                            )
+                                .setScale(0.5f) // Scale the original model to 50%.
+                                .setRecenterMode(RenderableSource.RecenterMode.ROOT)
+                                .build()
+                        )
+                        .setRegistryId("meltan")
+                        .build()*/
+                        
+
+                    val node = Mynode(this,R.raw.articfox)
                     node.image = augmentedImg
                     ar_view.scene.addChild(node)
                 }
@@ -194,22 +238,43 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
         }
     }
 
-    /*override fun onUpdate(p0: FrameTime?) {
-        val frame = ar_view.arFrame
-        val UpdateAugmentedImage = frame.getUpdatedTrackables<AugmentedImage>(AugmentedImage::class.java)
 
-        for(AugmentedImage in UpdateAugmentedImage)
-        {
-            if(augmentedImage.trackingState== TrackingState.TRACKING)
+    /*fun setupDatabase(config: Config, session: Session){
+        val foxBitmap = BitmapFactory.decodeResource(resources, R.drawable.earth)
+        val aid = AugmentedImageDatabase(session)
+        aid.addImage("target1", foxBitmap)
+        config.setAugmentedImageDatabase(aid)
+
+    }
+
+    override fun onUpdate(p0: FrameTime?) {
+        val frame = arFragment!!.arSceneView.arFrame
+        val images = frame!!.getUpdatedTrackables(AugmentedImage::class.java)
+
+        for (image in images){
+            if(image.trackingState == TrackingState.TRACKING)
             {
-                if(augmentedImg.name.equals("target_1"))
+                if(image.name.equals("target1"))
                 {
-                    val node=MyNode(this,R.raw.meltan)
-                    node.image=augmentedImg
-                    ar_view.scene.addChild(node)
+                    val anchor: Anchor = image.createAnchor(image.centerPose)
+                    createModel(anchor)
                 }
             }
         }
-    }*/
+    }
+
+    fun createModel(anchor:Anchor){
+        ModelRenderable.builder().setSource(this, Uri.parse("articfox.sfb"))
+            .build()
+            .thenAccept { modelRenderable -> placeModel(modelRenderable,anchor)  }
+    }
+
+    fun placeModel(modelRenderable: ModelRenderable,anchor:Anchor){
+        var anchorNode:AnchorNode= AnchorNode(anchor)
+        anchorNode.setRenderable(modelRenderable);
+        arFragment!!.getArSceneView().getScene().addChild(anchorNode);
+    }
+
+*/
 
 }

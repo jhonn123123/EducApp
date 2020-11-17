@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -45,6 +46,13 @@ dependencies {
     implementation 'com.google.ar.sceneform:assets:1.15.0'
     implementation 'com.karumi:dexter:6.2.1'
     implementation 'com.google.ar:core:1.21.0'
-
 }
+apply plugin: 'com.google.ar.sceneform.plugin'
+sceneform.asset('sampledata/meltan.glb', // 'Source Asset Path' specified during import.
+        'default',                            // 'Material Path' specified during import.
+        'sampledata/meltan.sfa',         // '.sfa Output Path' specified during import.
+        'src/main/assets/meltan.sfb')
+
+
+
  
