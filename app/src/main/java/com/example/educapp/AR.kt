@@ -16,6 +16,7 @@ import com.google.ar.sceneform.FrameTime
 import com.google.ar.sceneform.Scene
 import com.google.ar.sceneform.rendering.ModelRenderable
 import kotlinx.android.synthetic.main.activity_a_r.*
+import java.io.IOException
 
 
 class AR : AppCompatActivity(), Scene.OnUpdateListener {
@@ -146,19 +147,19 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
                 session=Session(this)
             }catch (e: UnavailableArcoreNotInstalledException)
             {
-                e.printStackTrace()
+               // e.printStackTrace()
             }
             catch (e: UnavailableApkTooOldException)
             {
-                e.printStackTrace()
+                //e.printStackTrace()
             }
             catch (e: UnavailableSdkTooOldException)
             {
-                e.printStackTrace()
+                //e.printStackTrace()
             }
             catch (e: UnavailableDeviceNotCompatibleException)
             {
-                e.printStackTrace()
+                //e.printStackTrace()
             }
 
             shouldConfigureSession=true
@@ -191,14 +192,26 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
 
     private fun buildDatabase(config: Config): Boolean{
         val augmentedImageDatabase:AugmentedImageDatabase
-        val bitmap = loadBitmapFromAsset()
+
+        try{
+            val inputStream=assets.open("edmtdev.imgdb")
+            augmentedImageDatabase=AugmentedImageDatabase.deserialize(session!!,inputStream)
+            config.augmentedImageDatabase = augmentedImageDatabase
+            return true
+        }
+        catch (e: IOException){
+            e.printStackTrace()
+            return false
+        }
+        /*val bitmap = loadBitmapFromAsset()
         if(bitmap == null)
             return false
 
         augmentedImageDatabase = AugmentedImageDatabase(session)
-        augmentedImageDatabase.addImage("target_1", bitmap)
-        config.augmentedImageDatabase = augmentedImageDatabase
-        return true
+        augmentedImageDatabase.addImage("target_1", bitmap)*/
+
+        /*config.augmentedImageDatabase = augmentedImageDatabase
+        return true*/
     }
 
     private fun loadBitmapFromAsset(): Bitmap? {
@@ -213,27 +226,67 @@ class AR : AppCompatActivity(), Scene.OnUpdateListener {
         {
             if(augmentedImg.trackingState == TrackingState.TRACKING)
             {
-                if (augmentedImg.name.equals("target_1"))
+                if (augmentedImg.name.equals("target_1.jpg"))
                 {
-                    /*ModelRenderable.builder()
-                        .setSource(
-                            this, RenderableSource.builder().setSource(
-                                this,
-                                Uri.parse("../../../../app/sampledata/meltan.glb"),
-                                RenderableSource.SourceType.GLTF2
-                            )
-                                .setScale(0.5f) // Scale the original model to 50%.
-                                .setRecenterMode(RenderableSource.RecenterMode.ROOT)
-                                .build()
-                        )
-                        .setRegistryId("meltan")
-                        .build()*/
-                        
-
                     val node = Mynode(this,R.raw.articfox)
                     node.image = augmentedImg
                     ar_view.scene.addChild(node)
                 }
+                else if (augmentedImg.name.equals("target_2.jpg"))
+                {
+                    val node = Mynode(this,R.raw.bear)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_3.jpg"))
+                {
+                    val node = Mynode(this,R.raw.cat)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_4.jpg"))
+                {
+                    val node = Mynode(this,R.raw.elephant)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_5.jpg"))
+                {
+                    val node = Mynode(this,R.raw.ferret)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_6.jpg"))
+                {
+                    val node = Mynode(this,R.raw.lion)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_7.jpg"))
+                {
+                    val node = Mynode(this,R.raw.reindeer)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_8.jpg"))
+                {
+                    val node = Mynode(this,R.raw.meltann)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_9.jpg"))
+                {
+                    val node = Mynode(this,R.raw.articfox)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+                else if (augmentedImg.name.equals("target_10.jpg"))
+                {
+                    val node = Mynode(this,R.raw.articfox)
+                    node.image = augmentedImg
+                    ar_view.scene.addChild(node)
+                }
+
             }
         }
     }

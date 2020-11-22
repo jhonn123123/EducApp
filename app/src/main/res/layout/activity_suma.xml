@@ -11,39 +11,35 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vector_level" />
+        android:layout_marginBottom="100dp" app:layout_constraintBottom_toTopOf="@+id/n2"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_level"/>
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="113dp"
-        android:layout_height="44dp"
+        android:layout_width="91dp"
+        android:layout_height="46dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Sumas"
         android:textColor="@color/babywhite"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.408" />
-
+        app:layout_constraintVertical_bias="0.475"/>
     <ImageView
         android:id="@+id/n2"
         android:layout_width="58dp"
         android:layout_height="78dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/numero_5" />
-
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="4dp" android:layout_marginBottom="310dp"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/imageView8" app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/numero_5"/>
     <ImageView
         android:id="@+id/n1"
         android:layout_width="66dp"
@@ -51,10 +47,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="399dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/numero_2" />
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/numero_2"/>
 
     <ImageView
         android:id="@+id/imageView8"
@@ -63,22 +60,24 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="405dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/n2"
-        app:layout_constraintStart_toEndOf="@+id/n1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/signo_suma" />
+        app:layout_constraintStart_toEndOf="@+id/n1" app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/signo_suma"/>
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="66dp"
         android:layout_height="55dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="85dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="433dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_ar"
-        app:layout_constraintStart_toEndOf="@+id/n2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/signo_igual" />
+        app:layout_constraintStart_toEndOf="@+id/n2" app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/signo_igual"/>
 
     <Button
         android:id="@+id/btn_ar"
@@ -87,13 +86,14 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="434dp"
         android:background="@drawable/btn_azul"
         android:text="?"
         android:textColor="@color/babypink"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"/>
 
     <!--
     <ImageView

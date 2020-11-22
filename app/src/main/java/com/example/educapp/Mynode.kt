@@ -31,7 +31,7 @@ class Mynode (context:Context,modelId:Int):AnchorNode(){
             node.setParent(this)
             node.localPosition=Vector3(pose.tx(),pose.ty(),pose.tz())
             node.localRotation=Quaternion(pose.qx(),pose.qy(),pose.qz(),pose.qw())
-            node.localScale=Vector3(image.extentX,image.extentZ,0.1f)
+            //node.localScale=Vector3(image.extentX,image.extentZ,3f)
             node.renderable= modelRender!!.getNow(null)
         }
     init {

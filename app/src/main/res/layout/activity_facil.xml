@@ -11,7 +11,8 @@
         android:id="@+id/btn_suma"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="168dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
         android:fontFamily="@font/ubuntu_light"
@@ -19,15 +20,14 @@
         android:textAllCaps="false"
         android:textColor="@color/babywhite"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_resta" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/btn_resta"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/ripple_effect"
         android:backgroundTint="@color/babyred"
         android:fontFamily="@font/ubuntu_light"
@@ -39,32 +39,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_suma"
-        app:layout_constraintVertical_bias="0.352" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_suma" app:layout_constraintVertical_bias="0.352"/>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_suma"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vector_level" />
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_level"/>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="180dp"
-        android:layout_height="43dp"
+        android:layout_width="146dp"
+        android:layout_height="45dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Nivel: Fácil"
         android:textColor="@color/babywhite"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintVertical_bias="0.351"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

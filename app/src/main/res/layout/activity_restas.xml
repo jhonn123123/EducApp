@@ -13,49 +13,45 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="434dp"
         android:background="@drawable/btn_azul"
         android:text="?"
         android:textColor="@color/babypink"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"/>
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vector_level" />
-
+        android:layout_marginBottom="90dp" app:layout_constraintBottom_toTopOf="@+id/r2"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_level"/>
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="113dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="93dp"
+        android:layout_height="46dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Restas"
         android:textColor="@color/babywhite"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        android:textSize="30sp"
+        android:textStyle="bold" app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@+id/imageView6"/>
     <ImageView
         android:id="@+id/r1"
         android:layout_width="66dp"
         android:layout_height="81dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/numero_9" />
+        android:layout_marginBottom="399dp"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/numero_9"/>
 
     <ImageView
         android:id="@+id/imageView12"
@@ -64,24 +60,23 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="425dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/r2"
         app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toEndOf="@+id/r1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/signo_resta" />
+        app:layout_constraintStart_toEndOf="@+id/r1" app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/signo_resta"/>
 
     <ImageView
         android:id="@+id/r2"
         android:layout_width="58dp"
         android:layout_height="78dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView14"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/numero_5" />
-
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="4dp" android:layout_marginBottom="340dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView14" app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/numero_5"/>
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="66dp"
@@ -89,8 +84,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="433dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_ar2"
-        app:layout_constraintStart_toEndOf="@+id/r2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/signo_igual" />
+        app:layout_constraintStart_toEndOf="@+id/r2" app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/signo_igual"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
