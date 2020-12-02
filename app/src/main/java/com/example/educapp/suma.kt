@@ -24,11 +24,7 @@ class suma : AppCompatActivity() {
         var rand=numeros[Random.nextInt(numeros.size)]
         val ImageView1 = findViewById<ImageView>(R.id.n1)
         val ImageView2 = findViewById<ImageView>(R.id.n2)
-        //val ImageView3 = findViewById<ImageView>(R.id.apple1)
-        //val ImageView4 =findViewById<ImageView>(R.id.apple2)
 
-        /*var rn1=Random.nextInt((numeros.size/2)+1)
-        var rn2=Random.nextInt((numeros.size/2)+1)*/
         var rn1=Random.nextInt(numeros.size)
         var rn2=Random.nextInt((numeros.size))
         var resource=numeros[rn1];
